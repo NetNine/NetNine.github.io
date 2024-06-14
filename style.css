@@ -19,7 +19,7 @@ body {
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background: #9900ff;
+    background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;

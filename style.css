@@ -70,17 +70,16 @@ body {
 .home-img {
     display: flex;
     flex-direction: column;
-    width: 110%;
-    height: 110%;
+    width: 110;
+    height: 110;
     margin-top: 25px;
-    margin-right: -100px;
+    margin-left: 125px;
     opacity: 0;
-    animation: zoomIn 1s ease forwards;
-    animation-delay: 1.4s;
+    animation: zoomIn 1.3s ease forwards;
+    animation-delay: 1s;
 }
 
 .home-content {
-    margin: 0 0 -60px 100px;
     max-width: 600px;
 
     svg {
@@ -88,7 +87,7 @@ body {
         margin: -293px 0 0 -78px;
         z-index: -1;
         opacity: 0;
-        animation: slideRight 1.5s ease forwards;
+        animation: slideRight 1s ease forwards;
     }
 }
 
@@ -111,13 +110,13 @@ h1.name {
     opacity: 0;
     animation: slideRight 1s ease forwards;
     animation-delay: 1s;
-
 }
 
 .home-content .IM {
     opacity: 0;
     animation: slideBottom 1s ease forwards;
     animation-delay: .7s;
+    
 }
 
 .home-content h3 {
@@ -129,12 +128,24 @@ h1.name {
     opacity: 0;
     animation: slideTop 1s ease forwards;
     animation-delay: .7s;
+    
 }
 
 .home-content h3 span {
     color: #d0ff00
 }
-
+/*
+.home-content h3 span::before {
+    content: "";
+    right: 270px;
+    top: 50%;
+    position: absolute;
+    height: 38px;
+    width: 5px;
+    background: #eeff00;
+    transform: translateY(-45%);
+}
+*/
 .home-content .btn-box {
     display: flex;
     justify-content: space-between;
@@ -180,7 +191,7 @@ h1.name {
 
 }
 
- .myButton a {
+.myButton a {
     position: relative;
     display: inline-flex;
     justify-content: center;
@@ -193,16 +204,116 @@ h1.name {
     font-size: 19px;
     color: #081b29;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 800;
     letter-spacing: 1px;
     margin-left: 50px;
     z-index: 1;
     overflow: hidden;
-    transition: .5s;
     opacity: 0;
-    animation: slideTop 1s ease forwards;
-    animation-delay: 1.2s;
+    animation: slideTop 1.4s ease forwards;
+    animation-delay: .7s;
 }
 
- .myButton a:nth-child(1)   {
-  
+.myButton a:nth-child(1) {
+    background: transparent;
+    color: #00f2ff;
+    
+}
+
+.myButton a:nth-child(1):hover {
+    color: #0a000f;
+    box-shadow: 0 0 20px#00f2ff;
+}
+
+.myButton a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00f2ff;
+    z-index: -1;
+    transition: .5s;
+}
+
+.myButton a:hover::before  {
+    width: 100%;
+}
+.home-sci {
+    position: absolute;
+    bottom: 240px;
+    width: 240px;
+    display: flex;
+    justify-content: space-between;
+}
+.home-sci a {
+    display: inline-flex; 
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00f2ff;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00f2ff;
+    text-decoration: none;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideTop 1.4s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-sci a:hover {
+    background: #00f2ff;
+    color: #0a000f;
+    box-shadow: 0 0 20px#00f2ff;
+}
+
+/*KEYFRAME ANIMATION*/
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

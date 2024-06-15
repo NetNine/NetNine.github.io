@@ -58,28 +58,24 @@ body {
 .navbar a:hover ,
 .navbar a.active {
     color: #00f2ff;
+    border-bottom: 1px cadetblue
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 12% 10rem;
 }
 
 .home {
     display: flex;
     align-items: center;
     padding: 0 10%;
+    gap: 15rem;
     height: 100vh;
 }
 
-.home-img {
-    display: flex;
-    flex-direction: column;
-    width: 110;
-    height: 110;
-    margin-top: 25px;
-    margin-left: 125px;
-    opacity: 0;
-    animation: zoomIn 1.3s ease forwards;
-    animation-delay: 1s;
-}
-
 .home-content {
+    padding-left: 50px;
     max-width: 600px;
 
     svg {
@@ -91,8 +87,6 @@ body {
     }
 }
 
-
-
 .home-content h1 {
     position: relative;
     font-size: 35px;
@@ -100,6 +94,39 @@ body {
     line-height: 1.1;
     color: #ffffff;  
 }
+
+.home-img {
+    display: flex;
+    flex-direction: column;
+    padding: 0px -10px;
+    opacity: 0;
+    animation: zoomIn 1.3s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-img01 img {
+    position: relative;
+    max-width: 500px;
+    top: 2rem;
+    left: 8rem;
+    border-radius: 50%;
+    box-shadow: 0 0 25px#00f2ff;
+}
+
+.home-img-bg img {
+    position: absolute;
+    top: -15rem;
+    right: -15rem;
+    rotate: -4deg;
+    max-width: 1000px;
+    z-index: -1;
+
+}
+img {
+    display: block;
+}
+
+
 
 h1.name {
     margin-bottom: -15px;

@@ -6,30 +6,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NETNINE</title>
-    <link rel="icon" type="image/x-icon" href="Tab_logo2.png">
+    <link rel="icon" type="image/x-icon" href="Image/Tab_logo2.png">
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
 
+    <div class="cursor-main">
+
+        
+        <div class="cursor-bb">
+
+            <div class="cursor"></div>
+            
+        </div>
+        
+        <script type="text/javascript">
+            const cursor = document.querySelector(".cursor");
+            var timeout;
+    
+            //follow cursor on mousemove
+            document.addEventListener("mousemove", e => {
+                let x = e.pageX
+                let y = e.pageY
+
+                cursor.style.top = y + "px"
+                cursor.style.left = x + "px"
+                cursor.style.display = "block";
+            
+    
+                //cursor effect on mouse stopped
+                function mouseStopped() {
+                    cursor.style.display = "none";
+                }
+                clearTimeout(timeout);
+                timeout = setTimeout(mouseStopped, 1000);
+            });
+        </script>
+
+    </div>
+
     <header class="header">
 
-        <a href="https://netnine.github.io/" class="logo">NetNine</a>
+        <a href="#home" class="logo">NetNine</a>
 
         <div class="boder">
             <nav class="navbar">
-                <a href="#" style="--i:1;" class="active">Home</a>
-                <a href="#"style="--i:2;">Abont Me</a>
-                <a href="#"style="--i:3;">Skills</a>
-                <a href="#"style="--i:4;">Services</a>
-                <a href="#"style="--i:5;">Contact</a>
+                <a href="#home" style="--i:1;" class="active">Home</a>
+                <a href="#about me"style="--i:2;">About Me</a>
+                <a href="#skills"style="--i:3;">Skills</a>
+                <a href="#services"style="--i:4;">Services</a>
+                <a href="#contact"style="--i:5;">Contact</a>
             </nav>
         </div>
 
     </header>
 
-    <section class="home">
+    <section class="home" id="home">
 
         <div class="home-content">
 
@@ -60,11 +94,11 @@
         <div class="home-img">
 
             <div class="home-img01">
-                <img src="logo.png" alt="">
+                <img src="Image/logo.png" alt="">
             </div>
 
             <div class="home-img-bg">
-                <img src="bg.png" alt="">
+                <img src="Image/bg.png" alt="">
             </div>
             
         </div>
@@ -85,7 +119,52 @@
 
 
     </section>
-  
+
+    <section class="about-me" id="about me">
+        
+        <div class="abont-content">
+
+            <h1 class="Abu-Text-01">About <span>Me</span></h1>
+            <p class="Abu-Par">"I'm NetNine, It's my brand name. With 3 years of experience in Forex trading, I specialize in ethical hacking, web development, frontend development, and UI design, each with 1 year of experience. Additionally, I have skills in graphics design, video editing, and content creation, which I've been developing over the past 5 years. I'm passionate about leveraging technology to create impactful solutions and bring creative visions to life. This website serves as my portfolio, showcasing my skills and projects."</p>
+            
+
+            <div class="about-img-sub">
+            
+                <div class="about-img-B">
+                    <img src="Image/Svg (About Me)/lightbulb.svg" alt="bg">
+                </div>
+    
+                <div class="about-img-M">
+                    <img src="Image/Svg (About Me)/Vector 141.svg" alt="">
+                </div>
+    
+                <div class="about-img-A">
+                    <img src="Image/Svg (About Me)/Vector 186.svg" alt="">
+                </div> 
+    
+            </div>
+            
+        </div>
+
+        <div class="about-img-Main">
+            
+            <div class="about-img-bg">
+                <img src="Image/Svg (About Me)/doodle items.svg" alt="bg">
+            </div>
+
+            <div class="about-img-man">
+                <img src="Image/Svg (About Me)/Group 62.svg" alt="">
+            </div>
+
+            <div class="about-img-ZZ">
+                <img src="Image/Svg (About Me)/Group 2350.svg" alt="">
+            </div>
+
+        </div>
+
+    </section>
+
+    
 </body>
 
 </html>

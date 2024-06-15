@@ -111,13 +111,21 @@ section {
     left: 8rem;
     border-radius: 50%;
     box-shadow: 0 0 25px#00f2ff;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.home-img01 img:hover {
+    box-shadow: 0 0 15px #ff2600,
+                0 0 25px #ff9100,
+                0 0 45px #ffe600;
 }
 
 .home-img-bg img {
     position: absolute;
     top: -15rem;
     right: -15rem;
-    rotate: -4deg;
+    rotate: -1deg;
     max-width: 1000px;
     z-index: -1;
 
@@ -129,10 +137,12 @@ img {
 
 
 h1.name {
-    margin-bottom: -15px;
+    margin-bottom: -10px;
     padding-top: 5px;
     font-size: 140px;
     font-weight: 700;
+    display: flex;
+
     color: #00f2ff ;
     opacity: 0;
     animation: slideRight 1s ease forwards;
@@ -210,7 +220,8 @@ h1.name {
 	position:relative;
 	top:1px;
 }*/
- .home .myButton { 
+ .home .myButton {
+    padding-top: 20px;
     width: 345px;
     height: 50px;
     display: flex;
@@ -269,7 +280,7 @@ h1.name {
 }
 .home-sci {
     position: absolute;
-    bottom: 240px;
+    bottom: 200px;
     width: 240px;
     display: flex;
     justify-content: space-between;

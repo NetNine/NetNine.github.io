@@ -26,11 +26,13 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    
 }
-
 .cursor-bb {
-    display: flex;
-    filter: blur(20px);
+    position: none;
+    align-items: center;
+    filter: blur(15px);
+    z-index: -999;
 }
 
 .cursor {

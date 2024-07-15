@@ -12,11 +12,6 @@ body {
     background-color: #09000F;
     background-image: linear-gradient(to right, #24003900, #30010133);
 }
-
-.cursor-bb {
-    filter: blur(15px);
-}
-
 .cursor {
     position: fixed;
     margin-top: -16px;
@@ -28,7 +23,6 @@ body {
     height: 50px;
     border-radius: 50px;
     animation: colors 5s infinite;
-    
 }
 
 .header {

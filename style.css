@@ -4,15 +4,14 @@
     --primary-color: #00ffff;
     --secondary-color: #ff0099;
     --text-color: #ffffff;
-    --bg-color: #0a0a1f;
-    --card-bg: rgba(26, 26, 26, 0.5);
+    --bg-color: #030311;
+    --card-bg: rgba(15, 15, 35, 0.5);
     --border-color: #00ffff;
     --glow-color: rgba(0, 255, 255, 0.6);
     --blur-amount: 10px;
-    --glass-bg: rgba(10, 10, 31, 0.7);
+    --glass-bg: rgba(15, 15, 35, 0.7);
     --glass-border: rgba(0, 255, 255, 0.2);
 }
-
 * {
     margin: 0;
     padding: 0;
@@ -224,6 +223,20 @@ body {
     left: 100%;
 }
 
+.btn.patreon {
+    background: var(--glass-bg);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    backdrop-filter: blur(var(--blur-amount));
+    transition: all 0.3s ease;
+}
+
+.btn.patreon:hover {
+    background: var(--primary-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 20px var(--glow-color);
+}
+
 @keyframes rotate {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
@@ -433,6 +446,82 @@ body {
     color: var(--border-color);
     position: absolute;
     left: -1rem;
+}
+
+/* Enhanced Services Section */
+.service-card {
+    background: var(--glass-bg);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid var(--glass-border);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card.premium {
+    border: 2px solid var(--primary-color);
+}
+
+.service-card.featured {
+    border: 2px solid var(--secondary-color);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.service-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.service-links {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.service-links .btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+}
+
+.btn.youtube {
+    background: #ff0000;
+    color: white;
+}
+
+.btn.telegram {
+    background: #0088cc;
+    color: white;
+}
+
+.btn.website {
+    background: var(--primary-color);
+    color: var(--bg-color);
+}
+
+.service-badges {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.badge {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background: rgba(0, 255, 255, 0.1);
+    color: var(--primary-color);
+    font-size: 0.9rem;
 }
 
 /* Contact Section */
@@ -1028,9 +1117,9 @@ body {
 
 .progress-bar {
     width: 100%;
-    height: 8px;
+    height: 25px; /* Increased height to fit text */
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
+    border-radius: 15px;
     overflow: hidden;
     position: relative;
 }
@@ -1038,9 +1127,21 @@ body {
 .progress-fill {
     height: 100%;
     background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-    border-radius: 4px;
+    border-radius: 15px;
     position: relative;
-    animation: fillProgress 1.5s ease-out forwards;
+    transition: width 1.5s ease-out;
+}
+
+.percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--text-color);
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
 }
 
 .progress-fill::after {
@@ -1195,4 +1296,15 @@ body {
     .contact-item {
         width: 100%;
     }
+}
+
+.service-icon .brand-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 50%;
+    padding: 5px;
+    background: var(--glass-bg);
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 15px var(--glow-color);
 }

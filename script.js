@@ -1,5 +1,6 @@
 // JavaScript Document
 
+
 //follow cursor on mousemove
 document.addEventListener("mousemove", e => {
     let cursor = document.querySelector(".cursor");

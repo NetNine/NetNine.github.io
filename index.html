@@ -8,298 +8,398 @@
     <link rel="icon" type="image/x-icon" href="Image/Tab_logo2.png">
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <scrip</head>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
 <body>
     <nav class="navbar">
-        <div class="logo">NetNine</div>
+        <div class="logo">
+            <div class="logo-wrapper">
+                <img src="Image/Tab_logo2.png" alt="NetNine Logo" class="logo-img">
+            </div>
+            <span class="logo-text">NetNine</span>
+        </div>
+        <div class="mobile-menu">
+            <i class='bx bx-menu'></i>
+        </div>
         <div class="nav-links">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About Me</a>
-            <a href="#skills">Skills</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About Me</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#contact" class="nav-link">Contact</a>
         </div>
     </nav>
 
-    <section id="home" class="home">
-        <div class="home-content">
-            <span class="subtitle">I'm</span>
-            <h1 class="title">NetNine</h1>
-            <div class="text-animate">
-                <h3 class="profession">>> Frontend Developer</h3>
+    <!-- Add proper spacing between sections -->
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="welcome-text reveal">Welcome to my Portfolio</span>
+                    <h1 class="hero-title gradient-text reveal">
+                        Hi, I'm NetNine
+                    </h1>
+                    <div class="text-animate reveal">
+                        <h3 class="profession">I'm a <span class="typed-text"></span></h3>
+                    </div>
+                    <p class="hero-description reveal">
+                        Transforming ideas into reality through code and creativity. 
+                        Specializing in trading solutions and modern web development.
+                    </p>
+                    <div class="cta-group reveal">
+                        <a href="#contact" class="btn primary-btn">Get in Touch</a>
+                        <a href="#services" class="btn secondary-btn">View Services</a>
+                    </div>
+                    <div class="social-links reveal">
+                        <a href="https://www.youtube.com/@netnine_2.0" class="social-link" aria-label="YouTube">
+                            <i class='bx bxl-youtube'></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/net-nine-40996a2b7" class="social-link" aria-label="LinkedIn">
+                            <i class='bx bxl-linkedin'></i>
+                        </a>
+                        <a href="https://www.x.com/@TThaviru" class="social-link" aria-label="Twitter">
+                            <i class='bx bxl-twitter'></i>
+                        </a>
+                        <a href="https://t.me/NetNine_official" class="social-link" aria-label="Telegram">
+                            <i class='bx bxl-telegram'></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image reveal">
+                    <div class="logo-circle">
+                        <div class="logo-glow"></div>
+                        <img src="Image/logo.png" alt="NetNine" class="profile-image" loading="lazy">
+                    </div>
+                    <div class="floating-elements">
+                        <span class="floating-item item-1">Trading</span>
+                        <span class="floating-item item-2">Development</span>
+                        <span class="floating-item item-3">Design</span>
+                    </div>
+                </div>
             </div>
-            <div class="social-links">
-                <a href="https://www.youtube.com/@netnine_2.0" class="social-link"><i class='bx bxl-youtube'></i></a>
-                <a href="https://www.linkedin.com/in/net-nine-40996a2b7" class="social-link"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://www.x.com/@TThaviru" class="social-link"><i class='bx bxl-twitter'></i></a>
-                <a href="https://t.me/NetNine_official" class="social-link"><i class='bx bxl-telegram'></i></a>
+            <div class="scroll-indicator">
+                <span class="mouse"></span>
+                <span class="scroll-text">Scroll Down</span>
             </div>
-            <a href="#contact" class="btn">Contact</a>
-        </div>
-        <div class="home-image">
-            <div class="glowing-circle">
-                <span></span>
-                <span></span>
-                <div class="image">
-                    <img src="Image/logo.png" alt="NetNine">
+        </section>
+
+        <section id="about" class="about">
+        <h2 class="section-title">About <span>Me</span></h2>
+        <div class="about-container">
+            <div class="about-grid">
+                <!-- Professional Cards -->
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class='bx bx-line-chart-dots'></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Trading Expert</h3>
+                        <p>Specialized in forex and algorithmic trading strategies with proven success records.</p>
+                    </div>
+                    <div class="card-decoration"></div>
+                </div>
+
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class='bx bx-code-alt'></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Full-Stack Dev</h3>
+                        <p>Creating modern web applications with cutting-edge technologies and best practices.</p>
+                    </div>
+                    <div class="card-decoration"></div>
+                </div>
+
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class='bx bx-brain'></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>AI Developer</h3>
+                        <p>Developing innovative machine learning solutions for complex trading problems.</p>
+                    </div>
+                    <div class="card-decoration"></div>
+                </div>
+            </div>
+
+            <!-- Timeline Section -->
+            <div class="journey-timeline">
+                <h3 class="timeline-title">My Journey</h3>
+                <div class="timeline-grid">
+                    <div class="timeline-card">
+                        <span class="year">2023</span>
+                        <div class="milestone">
+                            <h4>Trading Community</h4>
+                            <p>Launched premium trading community and mentorship program</p>
+                        </div>
+                    </div>
+                    <div class="timeline-card">
+                        <span class="year">2022</span>
+                        <div class="milestone">
+                            <h4>AI Development</h4>
+                            <p>Started developing AI-powered trading solutions</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="about">
-        <div class="expertise">
-            <div class="expertise-item">
-                <h3>Trading Expert</h3>
-                <p>Professional forex and algo trading</p>
-            </div>
-            <div class="expertise-item">
-                <h3>Full-Stack Dev</h3>
-                <p>Modern web applications</p>
-            </div>
-            <div class="expertise-item">
-                <h3>AI Developer</h3>
-                <p>Machine learning solutions</p>
-            </div>
-        </div>
-        <div class="timeline">
-            <div class="timeline-item">
-                <h3>Trading Community</h3>
-                <p>Launched premium trading community</p>
-            </div>
-            <div class="timeline-item">
-                <h3>AI Journey</h3>
-                <p>Started AI development</p>
-            </div>
-        </div>
-    </section>
+        <section id="skills" class="skills">
+            <h2 class="section-title">Skills & <span>Experience</span></h2>
+            <p class="section-subtitle">5+ years in trading and 6+ years in creative design</p>
+            <div class="skills-grid">
+                <!-- Trading Skills -->
+                <div class="skills-category">
+                    <h3><i class='bx bx-line-chart'></i>Trading Expertise</h3>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <h4>Forex Trading</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%">
+                                    <span class="percentage">75%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <h4>Technical Analysis</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 65%">
+                                    <span class="percentage">65%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <h4>Market Psychology</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 45%">
+                                    <span class="percentage">45%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    <section id="skills" class="skills">
-    <h2 class="section-title">Skills & <span>Experience</span></h2>
-    <p class="section-subtitle">5+ years in trading and 6+ years in creative design</p>
-    
-    <div class="skills-grid">
-        <!-- Trading Skills -->
-        <div class="skills-category">
-            <h3><i class='bx bx-line-chart'></i>Trading Expertise</h3>
-            <div class="skill-bar">
-                <div class="skill-info">
-                    <h4>Forex Trading</h4>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 75%">
-                            <span class="percentage">75%</span>
+                <!-- Creative Suite -->
+                <div class="skills-category">
+                    <h3><i class='bx bx-video'></i>Creative Suite</h3>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <h4>Adobe Premiere Pro</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%">
+                                    <span class="percentage">85%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <h4>After Effects</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 40%">
+                                    <span class="percentage">40%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <h4>Photoshop</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%">
+                                    <span class="percentage">90%</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="skill-bar">
-                <div class="skill-info">
-                    <h4>Technical Analysis</h4>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 65%">
-                            <span class="percentage">65%</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="skill-bar">
-                <div class="skill-info">
-                    <h4>Market Psychology</h4>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 45%">
-                            <span class="percentage">45%</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- Creative Suite -->
-        <div class="skills-category">
-            <h3><i class='bx bx-video'></i>Creative Suite</h3>
-            <div class="skill-bar">
-                <div class="skill-info">
-                    <h4>Adobe Premiere Pro</h4>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 85%">
-                            <span class="percentage">85%</span>
+                <!-- Development Skills -->
+                <div class="skills-category">
+                    <h3><i class='bx bx-code-alt'></i>Development</h3>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <h4>Frontend Development</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 60%">
+                                    <span class="percentage">60%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <h4>UI/UX Design</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%">
+                                    <span class="percentage">75%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <h4>AI/ML (Learning)</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 15%">
+                                    <span class="percentage">15%</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="skill-bar">
-                <div class="skill-info">
-                    <h4>After Effects</h4>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 40%">
-                            <span class="percentage">40%</span>
-                        </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="year">2018</span>
+                    <div class="content">
+                        <h3>Started Trading Journey</h3>
+                        <p>Began forex trading and market analysis</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="year">2017</span>
+                    <div class="content">
+                        <h3>Creative Design</h3>
+                        <p>Started professional video editing and design</p>
                     </div>
                 </div>
             </div>
-            <div class="skill-bar">
-                <div class="skill-info">
-                    <h4>Photoshop</h4>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 90%">
-                            <span class="percentage">90%</span>
-                        </div>
+        </section>
+
+        <section id="services" class="services">
+            <h2 class="section-title">My <span>Services</span></h2>
+            <div class="services-grid">
+                <!-- Trading Community & YouTube -->
+                <div class="service-card premium">
+                    <div class="service-icon">
+                        <img src="Image/logo.png" alt="NetNine Logo" class="brand-icon">
+                    </div>
+                    <h3>Trading Community</h3>
+                    <p>Join our premium trading community and YouTube channel</p>
+                    <ul>
+                        <li>Daily Market Analysis</li>
+                        <li>Trading Signals & Strategy</li>
+                        <li>Educational Content</li>
+                        <li>Live Trading Sessions</li>
+                    </ul>
+                    <div class="service-links">
+                        <a href="https://www.youtube.com/@netnine_2.0" class="btn youtube">
+                            <i class='bx bxl-youtube'></i> YouTube Channel
+                        </a>
+                        <a href="https://patreon.com/NETNINE" class="btn patreon">
+                            <i class='bx bxl-patreon'></i> Join Patreon
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Prototype FX Mentorship -->
+                <div class="service-card featured">
+                    <div class="service-icon">
+                        <i class='bx bx-group'></i>
+                    </div>
+                    <h3>Prototype FX Mentorship</h3>
+                    <p>Professional forex trading mentorship program</p>
+                    <ul>
+                        <li>One-on-One Mentoring</li>
+                        <li>Advanced Trading Strategies</li>
+                        <li>Risk Management</li>
+                        <li>Portfolio Development</li>
+                    </ul>
+                    <div class="service-links">
+                        <a href="https://netnine.github.io/Prototype-Privet-Ment/index.html" class="btn website">
+                            <i class='bx bx-link-external'></i> Visit Website
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Development & Content Creation -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class='bx bx-code-block'></i>
+                    </div>
+                    <h3>Development & Content</h3>
+                    <p>Professional web and content creation services</p>
+                    <ul>
+                        <li>Frontend Development</li>
+                        <li>UI/UX Design</li>
+                        <li>Video & Post Editing</li>
+                        <li>Audio Production</li>
+                    </ul>
+                    <div class="service-badges">
+                        <span class="badge">HTML/CSS</span>
+                        <span class="badge">UI/UX</span>
+                        <span class="badge">Adobe Suite</span>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Development Skills -->
-        <div class="skills-category">
-            <h3><i class='bx bx-code-alt'></i>Development</h3>
-            <div class="skill-bar">
-                <div class="skill-info">
-                    <h4>Frontend Development</h4>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 60%">
-                            <span class="percentage">60%</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="skill-bar">
-                <div class="skill-info">
-                    <h4>UI/UX Design</h4>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 75%">
-                            <span class="percentage">75%</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="skill-bar">
-                <div class="skill-info">
-                    <h4>AI/ML (Learning)</h4>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 15%">
-                            <span class="percentage">15%</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="timeline">
-        <div class="timeline-item">
-            <span class="year">2018</span>
-            <div class="content">
-                <h3>Started Trading Journey</h3>
-                <p>Began forex trading and market analysis</p>
-            </div>
-        </div>
-        <div class="timeline-item">
-            <span class="year">2017</span>
-            <div class="content">
-                <h3>Creative Design</h3>
-                <p>Started professional video editing and design</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="services" class="services">
-    <h2 class="section-title">My <span>Services</span></h2>
-    <div class="services-grid">
-        <!-- Trading Community & YouTube -->
-        <div class="service-card premium">
-            <div class="service-icon">
-                <img src="Image/logo.png" alt="NetNine Logo" class="brand-icon">
-            </div>
-            <h3>Trading Community</h3>
-            <p>Join our premium trading community and YouTube channel</p>
-            <ul>
-                <li>Daily Market Analysis</li>
-                <li>Trading Signals & Strategy</li>
-                <li>Educational Content</li>
-                <li>Live Trading Sessions</li>
-            </ul>
-            <div class="service-links">
-                <a href="https://www.youtube.com/@netnine_2.0" class="btn youtube">
-                    <i class='bx bxl-youtube'></i> YouTube Channel
-                </a>
-                <a href="https://patreon.com/NETNINE" class="btn patreon">
-                    <i class='bx bxl-patreon'></i> Join Patreon
-                </a>
-            </div>
-        </div>
-
-        <!-- Prototype FX Mentorship -->
-        <div class="service-card featured">
-            <div class="service-icon">
-                <i class='bx bx-group'></i>
-            </div>
-            <h3>Prototype FX Mentorship</h3>
-            <p>Professional forex trading mentorship program</p>
-            <ul>
-                <li>One-on-One Mentoring</li>
-                <li>Advanced Trading Strategies</li>
-                <li>Risk Management</li>
-                <li>Portfolio Development</li>
-            </ul>
-            <div class="service-links">
-                <a href="https://netnine.github.io/Prototype-Privet-Ment/index.html" class="btn website">
-                    <i class='bx bx-link-external'></i> Visit Website
-                </a>
-            </div>
-        </div>
-
-        <!-- Development & Content Creation -->
-        <div class="service-card">
-            <div class="service-icon">
-                <i class='bx bx-code-block'></i>
-            </div>
-            <h3>Development & Content</h3>
-            <p>Professional web and content creation services</p>
-            <ul>
-                <li>Frontend Development</li>
-                <li>UI/UX Design</li>
-                <li>Video & Post Editing</li>
-                <li>Audio Production</li>
-            </ul>
-            <div class="service-badges">
-                <span class="badge">HTML/CSS</span>
-                <span class="badge">UI/UX</span>
-                <span class="badge">Adobe Suite</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <section id="contact" class="contact">
+        <section id="contact" class="contact">
+    <div class="contact-container">
         <h2 class="section-title">Get in <span>Touch</span></h2>
+        
+        <div class="contact-content">
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <div class="contact-card">
+                    <div class="card-icon">
+                        <i class='bx bx-envelope'></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Email</h3>
+                        <a href="mailto:all.student.pm@gmail.com">all.student.pm@gmail.com</a>
+                    </div>
+                </div>
 
-        <div class="contact-info">
-            <div class="contact-item">
-                <i class='bx bx-envelope'></i>
-                <p>Email: <a href="mailto:all.student.pm@gmail.com">all.student.pm@gmail.com</a></p>
+                <div class="contact-card">
+                    <div class="card-icon">
+                        <i class='bx bxl-whatsapp'></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>WhatsApp</h3>
+                        <a href="https://wa.me/0743591442">0743591442</a>
+                    </div>
+                </div>
             </div>
 
-            <div class="contact-item">
-                <i class='bx bxl-whatsapp'></i>
-                <p>WhatsApp: <a href="https://wa.me/0743591442">0743591442</a></p>
+            <!-- Social Media Grid -->
+            <div class="social-grid">
+                <a href="https://www.youtube.com/@netnine_2.0" class="social-card youtube">
+                    <i class='bx bxl-youtube'></i>
+                    <span>YouTube Channel</span>
+                </a>
+                <a href="https://www.linkedin.com/in/net-nine-40996a2b7" class="social-card linkedin">
+                    <i class='bx bxl-linkedin'></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://www.x.com/@TThaviru" class="social-card twitter">
+                    <i class='bx bxl-twitter'></i>
+                    <span>Twitter</span>
+                </a>
+                <a href="https://t.me/NetNine_official" class="social-card telegram">
+                    <i class='bx bxl-telegram'></i>
+                    <span>Telegram</span>
+                </a>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="contact-cta">
+                <a href="https://t.me/NetNine_official" class="cta-btn glow-effect">
+                    <i class='bx bxl-telegram'></i>
+                    <span>Join Our Community</span>
+                </a>
             </div>
         </div>
-
-        <div class="social-links">
-            <a href="https://www.youtube.com/@netnine_2.0" class="social-link"><i class='bx bxl-youtube'></i></a>
-            <a href="https://www.linkedin.com/in/net-nine-40996a2b7" class="social-link"><i class='bx bxl-linkedin'></i></a>
-            <a href="https://www.x.com/@TThaviru" class="social-link"><i class='bx bxl-twitter'></i></a>
-            <a href="https://t.me/NetNine_official" class="social-link"><i class='bx bxl-telegram'></i></a>
-        </div>
-
-        <div class="cta-buttons">
-            <a href="https://t.me/NetNine_official" class="cta-btn">
-                <i class='bx bxl-telegram'></i>
-                Join Telegram
-            </a>
-        </div>
-    </section>
+    </div>
+</section>
+    </main>
 
     <div class="cursor"></div>
     <script src="script.js"></script>

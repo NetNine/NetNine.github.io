@@ -100,13 +100,12 @@ document.addEventListener('DOMContentLoaded', function() {
         startDelay: 500,
         loop: true,
         cursorChar: '|',
-        autoInsertCss: true,
-        showCursor: true
+        showCursor: true,
     };
 
     // Initialize Typed.js
     try {
-        const typed = new Typed('.typed-text', options);
+        const typed = new Typed('#typed-text', options);
     } catch (error) {
         console.error('Error initializing Typed.js:', error);
     }

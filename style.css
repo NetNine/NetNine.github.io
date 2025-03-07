@@ -182,6 +182,14 @@ section {
     z-index: 1001;
 }
 
+.nav-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 .nav-link {
     position: relative;
     color: var(--text-color);
@@ -206,6 +214,8 @@ section {
 .nav-link:hover::after,
 .nav-link.active::after {
     width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .nav-link:hover,
@@ -224,11 +234,12 @@ section {
     content: '';
     position: absolute;
     bottom: -2px;
-    left: 0;
+    left: 50%;
     width: 100%;
     height: 2px;
     background: var(--primary-color);
     box-shadow: 0 0 10px var(--glow-color);
+    transform: translateX(-50%);
 }
 
 .mobile-menu {
@@ -298,6 +309,14 @@ section {
     font-size: 5rem;
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
+    background-clip: text;
+    background-clip: text;
+    background-clip: text;
+    background-clip: text;
+    background-clip: text;
+    background-clip: text;
+    background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 0.5rem;
     font-weight: 700;
@@ -1597,11 +1616,14 @@ section {
 
 .hero-title {
     font-size: 4.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5),
+                 0 0 40px rgba(0, 0, 0, 0.3),
+                 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin-bottom: 1rem;
     line-height: 1.2;
-    margin-bottom: 1.5rem;
     position: relative;
-    color: var(--text-color);
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
 }
 
 .title-underline {
@@ -1617,8 +1639,7 @@ section {
 
 .highlight {
     color: var(--primary-color);
-    position: relative;
-    display: inline-block;
+    text-shadow: 0 0 15px var(--glow-color);
 }
 
 .title-decoration {
@@ -1698,8 +1719,8 @@ section {
     backdrop-filter: blur(5px);
 }
 
-.item-1 { top: 20%; left: -20%; animation: float 6s ease-in-out infinite; }
-.item-2 { top: 50%; right: -20%; animation: float 7s ease-in-out infinite 1s; }
+.item-1 { top: 20%; left: 52%; animation: float 6s ease-in-out infinite; }
+.item-2 { top: 50%; right: -14%; animation: float 7s ease-in-out infinite 1s; }
 .item-3 { bottom: 20%; left: -10%; animation: float 5s ease-in-out infinite 0.5s; }
 
 .scroll-indicator {
@@ -1898,7 +1919,7 @@ section {
 }
 
 .milestone h4 {
-    color: var(--text-color);
+    color: var (--text-color);
     font-size: 1.4rem;
     margin-bottom: 0.5rem;
 }
@@ -2138,6 +2159,7 @@ section {
     font-weight: 700;
     background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
     margin-bottom: 1rem;

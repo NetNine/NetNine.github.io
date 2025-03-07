@@ -22,13 +22,36 @@
             <i class='bx bx-menu'></i>
         </div>
         <div class="nav-links">
-            <a href="#home" class="nav-link">Home</a>
-            <a href="#about" class="nav-link">About Me</a>
-            <a href="#skills" class="nav-link">Skills</a>
-            <a href="#services" class="nav-link">Services</a>
-            <a href="#contact" class="nav-link">Contact</a>
+            <a href="#home" class="nav-link" id="home-link">Home</a>
+            <a href="#about" class="nav-link" id="about-link">About Me</a>
+            <a href="#skills" class="nav-link" id="skills-link">Skills</a>
+            <a href="#services" class="nav-link" id="services-link">Services</a>
+            <a href="#contact" class="nav-link" id="contact-link">Contact</a>
         </div>
     </nav>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 60) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
 
     <!-- Add proper spacing between sections -->
     <main>
@@ -36,11 +59,11 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <span class="welcome-text reveal">Welcome to my Portfolio</span>
-                    <h1 class="hero-title gradient-text reveal">
-                        Hi, I'm NetNine
+                    <h1 class="hero-title reveal">
+                        Hi, I'm <span class="gradient-highlight">NetNine</span>
                     </h1>
                     <div class="text-animate reveal">
-                        <h3 class="profession">I'm a <span class="typed-text"></span></h3>
+                        <h3 class="profession"> <span id="typed-text"></span></h3>
                     </div>
                     <p class="hero-description reveal">
                         Transforming ideas into reality through code and creativity. 

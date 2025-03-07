@@ -413,9 +413,19 @@ section {
 }
 
 .social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: var(--glass-bg);
+    border: 2px solid var(--glass-border);
+    border-radius: 50%;
     color: var(--text-color);
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     transition: all 0.3s ease;
+    cursor: pointer;
+    pointer-events: auto;
 }
 
 .social-link:hover {
@@ -425,7 +435,9 @@ section {
 }
 
 .btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
     padding: 1rem 2rem;
     background: transparent;
     border: 2px solid var(--primary-color);
@@ -436,6 +448,8 @@ section {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
+    pointer-events: auto;
 }
 
 .btn::before {
@@ -1516,6 +1530,8 @@ section {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
+    pointer-events: auto;
 }
 
 .cta-btn i {
@@ -2151,6 +2167,463 @@ section {
     .social-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* Modern Hero Section Styles */
+.gradient-text {
+    font-size: 4.5rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.profession {
+    font-size: 2rem;
+    color: var(--text-color);
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+#typed-text {
+    color: var(--primary-color);
+    text-shadow: 0 0 10px var(--glow-color);
+}
+
+.logo-circle {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.logo-glow {
+    position: absolute;
+    inset: -2px;
+    background: conic-gradient(
+        from 0deg,
+        transparent 0%,
+        var(--primary-color) 25%,
+        var(--secondary-color) 50%,
+        var(--primary-color) 75%,
+        transparent 100%
+    );
+    border-radius: 50%;
+    animation: spin 4s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.logo-circle:hover .logo-glow {
+    opacity: 1;
+}
+
+.logo-circle:hover {
+    transform: scale(1.05);
+    box-shadow: 
+        0 0 20px var(--glow-color),
+        0 0 40px var(--secondary-color);
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* About Section */
+.about {
+    padding: 6rem 4rem;
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.05) 0%, rgba(255, 0, 153, 0.05) 100%);
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.about-card {
+    position: relative;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 2rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.card-content h3 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.card-content p {
+    color: #888;
+    line-height: 1.6;
+}
+
+.card-decoration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: conic-gradient(from 0deg, transparent, var(--primary-color), transparent);
+    opacity: 0.1;
+    border-radius: 50%;
+    transform: translate(50%, -50%);
+}
+
+.journey-timeline {
+    margin-top: 4rem;
+}
+
+.timeline-title {
+    font-size: 2rem;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.timeline-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.timeline-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    padding: 2rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary-color);
+    box-shadow: 0 10px 30px rgba(255, 0, 153, 0.2);
+}
+
+.year {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--primary-color);
+    border-radius: 20px;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.milestone h4 {
+    color: var(--text-color);
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.milestone p {
+    color: #888;
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 4rem 2rem;
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Modern Contact Section */
+.contact {
+    position: relative;
+    padding: 6rem 4rem;
+    background: linear-gradient(135deg, 
+        rgba(0, 255, 255, 0.05) 0%, 
+        rgba(255, 0, 153, 0.05) 100%
+    );
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+/* Contact Cards */
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.contact-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(0, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover .card-icon {
+    background: var(--primary-color);
+    color: var(--bg-color);
+}
+
+.card-content h3 {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-content a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.card-content a:hover {
+    text-shadow: 0 0 10px var(--glow-color);
+}
+
+/* Social Media Grid */
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.social-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 2rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-card i {
+    font-size: 2.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-card span {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Social Media Colors */
+.social-card.youtube {
+    border-color: rgba(255, 0, 0, 0.3);
+}
+
+.social-card.youtube i {
+    color: #ff0000;
+}
+
+.social-card.youtube:hover {
+    background: rgba(255, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.2);
+}
+
+.social-card.linkedin {
+    border-color: rgba(0, 119, 181, 0.3);
+}
+
+.social-card.linkedin i {
+    color: #0077b5;
+}
+
+.social-card.linkedin:hover {
+    background: rgba(0, 119, 181, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 119, 181, 0.2);
+}
+
+.social-card.twitter {
+    border-color: rgba(29, 161, 242, 0.3);
+}
+
+.social-card.twitter i {
+    color: #1da1f2;
+}
+
+.social-card.twitter:hover {
+    background: rgba(29, 161, 242, 0.1);
+    box-shadow: 0 10px 30px rgba(29, 161, 242, 0.2);
+}
+
+.social-card.telegram {
+    border-color: rgba(0, 136, 204, 0.3);
+}
+
+.social-card.telegram i {
+    color: #0088cc;
+}
+
+.social-card.telegram:hover {
+    background: rgba(0, 136, 204, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 136, 204, 0.2);
+}
+
+/* CTA Button */
+.contact-cta {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background: var(--glass-bg);
+    border: 2px solid var(--primary-color);
+    border-radius: 30px;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta-btn i {
+    font-size: 1.5rem;
+}
+
+.cta-btn:hover {
+    background: var(--primary-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 30px var(--glow-color);
+    transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact {
+        padding: 4rem 2rem;
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .social-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 12px;
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+        180deg,
+        var(--primary-color) 0%,
+        var(--secondary-color) 100%
+    );
+    border-radius: 10px;
+    border: 2px solid var(--bg-color);
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(
+        180deg,
+        var(--secondary-color) 0%,
+        var(--primary-color) 100%
+    );
+    box-shadow: 0 0 15px var(--glow-color);
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) var(--bg-color);
 }
 
 /* Modern Hero Section Styles */

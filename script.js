@@ -351,30 +351,43 @@ function scrollToSection(sectionId) {
 
 // Button click handlers
 document.addEventListener('DOMContentLoaded', function() {
-    const ctaButtons = document.querySelectorAll('.cta-group .btn');
+    const buttons = document.querySelectorAll('.cta-group .btn');
     
-    ctaButtons.forEach(button => {
+    buttons.forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            scrollToSection(targetId);
+            
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+                const navHeight = document.querySelector('.navbar').offsetHeight;
+                const targetPosition = targetSection.offsetTop - navHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 });
 
-// Replace the existing CTA buttons code with this updated version
+// Clean up button functionality
 document.addEventListener('DOMContentLoaded', function() {
-    const ctaButtons = document.querySelectorAll('.cta-group .btn');
+    const buttons = document.querySelectorAll('.btn');
     
-    ctaButtons.forEach(button => {
+    buttons.forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-            const navHeight = document.querySelector('.navbar').offsetHeight;
+            
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
             
             if (targetSection) {
+                const navHeight = document.querySelector('.navbar').offsetHeight;
                 const targetPosition = targetSection.offsetTop - navHeight;
+                
                 window.scrollTo({
                     top: targetPosition,
                     behavior: 'smooth'

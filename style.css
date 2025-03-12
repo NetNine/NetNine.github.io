@@ -408,8 +408,9 @@ section {
 /* Social Links */
 .social-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 1.2rem;
     margin: 2rem 0;
+    z-index: 2;
 }
 
 .social-link {
@@ -425,31 +426,95 @@ section {
     font-size: 1.5rem;
     transition: all 0.3s ease;
     cursor: pointer;
-    pointer-events: auto;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, 
+        var(--primary-color), 
+        var(--secondary-color)
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .social-link:hover {
-    color: var(--primary-color);
-    transform: translateY(-3px);
-    text-shadow: 0 0 15px var(--glow-color);
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+}
+
+.social-link:hover::before {
+    opacity: 1;
+}
+
+.social-link i {
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover i {
+    color: var(--bg-color);
+    transform: scale(1.1);
+}
+
+/* Social Media Brand Colors */
+.social-link[href*="youtube"] {
+    border-color: rgba(255, 0, 0, 0.3);
+}
+
+.social-link[href*="youtube"]:hover {
+    box-shadow: 0 8px 20px rgba(255, 0, 0, 0.3);
+}
+
+.social-link[href*="linkedin"] {
+    border-color: rgba(0, 119, 181, 0.3);
+}
+
+.social-link[href*="linkedin"]:hover {
+    box-shadow: 0 8px 20px rgba(0, 119, 181, 0.3);
+}
+
+.social-link[href*="twitter"], 
+.social-link[href*="x.com"] {
+    border-color: rgba(29, 161, 242, 0.3);
+}
+
+.social-link[href*="twitter"]:hover,
+.social-link[href*="x.com"]:hover {
+    box-shadow: 0 8px 20px rgba(29, 161, 242, 0.3);
+}
+
+.social-link[href*="telegram"] {
+    border-color: rgba(0, 136, 204, 0.3);
+}
+
+.social-link[href*="telegram"]:hover {
+    box-shadow: 0 8px 20px rgba(0, 136, 204, 0.3);
 }
 
 .btn {
+    position: relative;
     display: inline-flex;
     align-items: center;
     gap: 0.8rem;
     padding: 1rem 2rem;
-    background: transparent;
     border: 2px solid var(--primary-color);
     color: var(--primary-color);
     text-decoration: none;
     border-radius: 30px;
     font-weight: 500;
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
     cursor: pointer;
-    pointer-events: auto;
+    z-index: 2;
+    background: transparent;
+    overflow: hidden;
 }
 
 .btn::before {
@@ -484,6 +549,16 @@ section {
     background: var(--primary-color);
     color: var(--bg-color);
     box-shadow: 0 0 20px var(--glow-color);
+}
+
+.primary-btn {
+    background: var(--primary-color);
+    color: var(--bg-color);
+}
+
+.secondary-btn {
+    background: transparent;
+    color: var(--primary-color);
 }
 
 @keyframes rotate {
@@ -858,18 +933,95 @@ section {
 /* Social Links */
 .social-links {
     display: flex;
-    gap: 1rem;
-    margin: 1rem 0;
+    gap: 1.2rem;
+    margin: 2rem 0;
+    z-index: 2;
 }
 
 .social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: var(--glass-bg);
+    border: 2px solid var(--glass-border);
+    border-radius: 50%;
     color: var(--text-color);
     font-size: 1.5rem;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, 
+        var(--primary-color), 
+        var(--secondary-color)
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .social-link:hover {
-    color: var(--primary-color);
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+}
+
+.social-link:hover::before {
+    opacity: 1;
+}
+
+.social-link i {
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover i {
+    color: var(--bg-color);
+    transform: scale(1.1);
+}
+
+/* Social Media Brand Colors */
+.social-link[href*="youtube"] {
+    border-color: rgba(255, 0, 0, 0.3);
+}
+
+.social-link[href*="youtube"]:hover {
+    box-shadow: 0 8px 20px rgba(255, 0, 0, 0.3);
+}
+
+.social-link[href*="linkedin"] {
+    border-color: rgba(0, 119, 181, 0.3);
+}
+
+.social-link[href*="linkedin"]:hover {
+    box-shadow: 0 8px 20px rgba(0, 119, 181, 0.3);
+}
+
+.social-link[href*="twitter"], 
+.social-link[href*="x.com"] {
+    border-color: rgba(29, 161, 242, 0.3);
+}
+
+.social-link[href*="twitter"]:hover,
+.social-link[href*="x.com"]:hover {
+    box-shadow: 0 8px 20px rgba(29, 161, 242, 0.3);
+}
+
+.social-link[href*="telegram"] {
+    border-color: rgba(0, 136, 204, 0.3);
+}
+
+.social-link[href*="telegram"]:hover {
+    box-shadow: 0 8px 20px rgba(0, 136, 204, 0.3);
 }
 
 /* Responsive Design */
@@ -1679,6 +1831,8 @@ section {
     display: flex;
     gap: 1.5rem;
     margin-bottom: 3rem;
+    z-index: 2;
+    position: relative;
 }
 
 .primary-btn {
@@ -1688,7 +1842,6 @@ section {
 
 .secondary-btn {
     background: transparent;
-    border: 2px solid var(--primary-color);
     color: var(--primary-color);
 }
 
